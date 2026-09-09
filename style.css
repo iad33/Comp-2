@@ -5,12 +5,12 @@ body, html {
     margin: 0;
     font-family: roboto;
     color: black;
-    background-color: white;
+    background-color: rgb(246, 174, 254);
   }  
 
 .hero-image {
 /* This selector controls the "hero image" class. You may need to change "hero.jpg" name/format to match your asset, or vice-versa */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cats\ .jpg");
     height: 100%;
     background-attachment: fixed;
     background-position: center;

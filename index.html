@@ -31,33 +31,134 @@
 <!--To adjust hero image and text, find hero-image class on style.css-->
 <div class="hero-image">
   <div class="hero-text">
-      <h1>Title</h1>
-      <h2>Lorem Ipsum</h2>
+      <h1>A Cats Guide to Nothing</h1>
+      <h2>By: Izzy Dadzie</h2>
   </div>
 </div>
+<marquee>CATS ARE BETTER THAN DOGS</marquee>
+
+
 
 <!--To build your webtext, copy the code snippet (provided below) and paste into the <body> section below this line.-->
 
 
 <div class="text-block" style="text-align: left">
-  <h2>Welcome to Pitt Fuego Webtext Generator!</h2>
-    <p>Use Pitt Fuego to quickly create webtexts, websites, and presentations. Pitt Fuego looks great whether on a mobile phone or on the large display at your keynote presentation. We've embedded all the tools you need in these html/css files. Find code a range of snippets embedded at the bottom of the index.html file. To get started, simply <a href="https://github.com/Pitt-Fuego/pitt-fuego-webtext-generator">download the project code</a> and open the project folder using a code editor Like Visual Studio Code. We recommend you start learning Pitt Fuego with one of our introductory tools like the <em>I AM...A Project in Becoming.</em> or the <em>My Code and Digital Technology Narrative</em>. You can find all of our cool learning/template options at <a href="https://pitt-fuego.github.io/Pitt-Fuego-Coding-Tools/">Pitt Fuego Coding Tools</a>.</p>
+  <h2>All About CATS!!!</h2>
+    <p>Cats are continually communicating and don't explain anything. This glossary attempts to define cat behavior and ends up producing yet more behavior. See where this takes you</a>.</p>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Cat's Guide to Nothing</title>
+<link rel="icon" type="image/jpg" href="favicon.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+     <h1 class="glitch-rgb" data-text="A CAT'S GUIDE TO NOTHING">A CAT'S GUIDE TO NOTHING</h1>
+      <h2>By: Izzy Dadzie</h2>
+  </div>
+</div>
+
+<marquee>CATS!</marquee>
+
+<div class="text-block" style="text-align: left">
+  <h2>Understanding Cats</h2>
+    <p>Cats talk all the time but explain nothing. This glossary attempts to define their actions and ends up creating more actions. Click away and see whether you will ever come across an explanation.</p>
 </div>
 
 
-<div class="video">
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/KVUBbM7pIYw?si=S02HKRwmh-psrWHJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<script>
+document.querySelectorAll('.glitch-swap-wrap').forEach(function(el) {
+  var words = el.getAttribute('data-words').split('|');
+  var i = 0;
+  var wordEl = el.querySelector('.glitch-swap-word');
+
+  el.addEventListener('click', function() {
+    el.classList.remove('active');
+    void el.offsetWidth;
+    el.classList.add('active');
+
+    i = (i + 1) % words.length;
+    wordEl.textContent = words[i];
+    wordEl.setAttribute('data-text', words[i]);
+
+    setTimeout(function() {
+      el.classList.remove('active');
+    }, 350);
+  });
+});
+</script>
+<div class="text-block" style="text-align: center">
+  <h2>Ask the cat</h2>
+  <p id="cat-answer" style="font-size: 22px; font-weight: 700; min-height: 40px;">Click below for an answer.</p>
+  <div class="button-box">
+    <button id="ask-cat-btn" class="button">Ask the cat</button>
   </div>
-       <p><i>Add a caption.</i></p>
+  <script>
+var catTerms = [
+  "Knocking things off the table",
+  "Establishing dominance",
+  "Staring at you while you eat",
+  "3am zoomies",
+  "Sitting in a box that's too small",
+  "Ignoring you",
+  "Because it's a cat",
+  "Nobody knows",
+  "That's just what cats do"
+];
+
+document.getElementById('ask-cat-btn').addEventListener('click', function() {
+  var answerEl = document.getElementById('cat-answer');
+  var term1 = catTerms[Math.floor(Math.random() * catTerms.length)];
+  var term2 = catTerms[Math.floor(Math.random() * catTerms.length)];
+  answerEl.textContent = term1 + " means " + term2 + ".";
+});
+</script>
+</div>
+<div class="text-block" style="text-align: center" id="quiz-block">
+  <h2>Do you understand your cat?</h2>
+  <p id="quiz-question">Why did your cat knock the cup off the table?</p>
+  <div class="button-box" style="flex-direction: column; height: auto; gap: 10px;">
+    <button class="button quiz-option">To get your attention</button>
+    <button class="button quiz-option">Pure curiosity</button>
+    <button class="button quiz-option">Revenge</button>
+    <button class="button quiz-option">No reason at all</button>
+  </div>
+  <p id="quiz-feedback" style="margin-top: 16px; font-weight: 700;"></p>
+</div>
+<script>
+document.querySelectorAll('.quiz-option').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var feedback = document.getElementById('quiz-feedback');
+    feedback.textContent = "Not quite. Try again.";
+    setTimeout(function() {
+      feedback.textContent = "";
+    }, 1200);
+  });
+});
+</script>
+</body>
+</html>
+</div>
+
+
 </div>
 
   
 
 <div class="logo">
-  <img src="fuego.jpg" alt="Pitt Fuego Flame" width="25%">
+  <img src="cat broken plant.jpg" alt="Pitt Fuego Flame" width="25%">
   <p><b>generated by <a href="https://pitt-fuego.github.io/Pitt-Fuego-Coding-Tools/">Pitt Fuego</a></b></p>
-  <p><em>Why make a spark when you can light a fire?</em></p>
+  <p><em>Cats are the best!</em></p>
 </div>
 
   </body>
